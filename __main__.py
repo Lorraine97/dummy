@@ -1,3 +1,3 @@
 from dummyAPI.app import app
 
-app.main()
+app.run()

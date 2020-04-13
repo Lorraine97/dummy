@@ -4,7 +4,9 @@ from flask import Flask
 from .config import configure
 from dummyAPI.blueprints.dummy_blueprint import blueprint
 from .models import db_create
+import pymysql
 
+pymysql.install_as_MySQLdb()
 
 #
 # Create flask application and apply configuration
@@ -17,6 +19,7 @@ app = configure(app)
 
 # use SQLAlchemy in-built method to initiate the app db
 db_create.init_app(app)
+db_create.create_all(bind=None, app=app)
 
 #
 # Blueprint Registration
@@ -25,10 +28,10 @@ db_create.init_app(app)
 #
 app.register_blueprint(blueprint)
 
-
-def main():
-    app.run()
-
-
-if __name__ == '__main__':
-    main()
+#
+# def main():
+#     app.run()
+#
+#
+# if __name__ == '__main__':
+#     main()

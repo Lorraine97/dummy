@@ -1,0 +1,2 @@
+CREATE USER IF NOT EXISTS dummy IDENTIFIED BY 'dummy_pw';
+GRANT ALL PRIVILEGES ON dummydatabase.* TO dummy;
