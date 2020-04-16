@@ -2,7 +2,7 @@
 
 from flask import Flask
 from .config import configure
-from dummyAPI.blueprints.dummy_blueprint import blueprint
+from .blueprints.dummy_blueprint import blueprint
 from .models import db_create
 import pymysql
 

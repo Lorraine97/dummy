@@ -3,18 +3,18 @@
     "bid": 1,
     "title": "This is book 1",
     "timestamp": "Mon, 13 Apr 2020 20:38:41 GMT",
-    "edited": true
+    "active": true
   },
   {
     "bid": 2,
     "title": "This is book 2",
     "timestamp": "Mon, 13 Apr 2020 05:25:00 GMT",
-    "edited": true
+    "active": true
   },
   {
     "bid": 3,
     "title": "This is book 3",
     "timestamp": "Mon, 13 Apr 2020 05:25:00 GMT",
-    "edited": true
+    "active": true
   }
 ]

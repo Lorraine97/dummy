@@ -1,7 +1,6 @@
 from flask import jsonify, request
 from ..models import dummy_db
 
-
 # home
 # @app.route('/', methods=['GET'])
 def home():
@@ -11,14 +10,16 @@ def home():
 # return all books
 # @app.route('/api/books/all', methods=['GET'])
 def api_all():
-    return jsonify(dummy_db.all_books())
+    result = dummy_db.all_books()
+    return jsonify(result)
 
 
 # optional param
 # @app.route('/api/books', methods=['GET'])
 def api_id():
-    if len(dummy_db.all_books()) == 0:
-        return "Your bookshelf is empty. Please put some books first"
+    # this should be a special exception
+    # if len(dummy_db.all_books()) == 0:
+    #     return "Your bookshelf is empty. Please put some books first"
     if 'id' in request.args:
         book_id = int(request.args['id'])
     else:
